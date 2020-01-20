@@ -1,0 +1,2 @@
+# idopontok
+Időpontegyeztető script
