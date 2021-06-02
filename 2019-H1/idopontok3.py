@@ -17,7 +17,7 @@ csoportok = []
 idopontok = []
 valaszok = []
 tiltott = []
-with open('input.csv', 'r') as csvinput:
+with open('input.csv', 'rt') as csvinput:
     csvreader = csv.reader(csvinput, delimiter=CSV_DELIMITER, quotechar='"')
     rows = [row for row in csvreader]
 
@@ -57,7 +57,7 @@ def mentes():
     lehetosegek_sorrendben = sorted(lehetosegek, key=operator.itemgetter(0, 1))
     header = ['Rossz', 'Szomszedos']
     header.extend(idopontok)
-    with open('lehetosegek.csv', 'wb') as csvfile:
+    with open('lehetosegek.csv', 'wt') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csvwriter.writerow(header)
         for lehetoseg in lehetosegek_sorrendben:
