@@ -24,7 +24,7 @@ with open('input.csv', 'r') as csvinput:
     # Idopontok beolvasasa
     idopontok = rows[0][1:]
     idopont_szam = len(idopontok)
-    csoport_szam = (len(rows) - 1) / 2
+    csoport_szam = (len(rows) - 1) // 2
     #print idopont_szam, idopontok
 
     # Valaszok beolvasasa
